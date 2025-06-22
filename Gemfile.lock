@@ -1,36 +1,50 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    faraday (1.0.0)
-      multipart-post (>= 1.2, < 3)
-    jwt (2.2.1)
-    mini_portile2 (2.4.0)
-    multipart-post (2.1.1)
-    mustermann (1.1.1)
+    base64 (0.3.0)
+    faraday (2.8.1)
+      base64
+      faraday-net_http (>= 2.0, < 3.1)
+      ruby2_keywords (>= 0.0.4)
+    faraday-net_http (3.0.2)
+    jwt (2.10.1)
+      base64
+    logger (1.7.0)
+    mini_portile2 (2.8.9)
+    mustermann (3.0.3)
       ruby2_keywords (~> 0.0.1)
-    nokogiri (1.10.9)
-      mini_portile2 (~> 2.4.0)
-    rack (2.2.3)
-    rack-protection (2.0.8.1)
-      rack
-    ruby2_keywords (0.0.2)
-    sinatra (2.0.8.1)
-      mustermann (~> 1.0)
-      rack (~> 2.0)
-      rack-protection (= 2.0.8.1)
+    nokogiri (1.15.7)
+      mini_portile2 (~> 2.8.2)
+      racc (~> 1.4)
+    racc (1.8.1)
+    rack (3.1.16)
+    rack-protection (4.1.1)
+      base64 (>= 0.1.0)
+      logger (>= 1.6.0)
+      rack (>= 3.0.0, < 4)
+    rack-session (2.1.1)
+      base64 (>= 0.1.0)
+      rack (>= 3.0.0)
+    ruby2_keywords (0.0.5)
+    sinatra (4.1.1)
+      logger (>= 1.6.0)
+      mustermann (~> 3.0)
+      rack (>= 3.0.0, < 4)
+      rack-protection (= 4.1.1)
+      rack-session (>= 2.0.0, < 3)
       tilt (~> 2.0)
-    tilt (2.0.10)
-    twilio-ruby (5.32.0)
-      faraday (~> 1.0.0)
-      jwt (>= 1.5, <= 2.5)
+    tilt (2.6.0)
+    twilio-ruby (7.6.3)
+      faraday (>= 0.9, < 3.0)
+      jwt (>= 1.5, < 3.0)
       nokogiri (>= 1.6, < 2.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  sinatra!
-  twilio-ruby!
+  sinatra (>= 2.1.0)!
+  twilio-ruby (>= 5.33.0)!
 
 BUNDLED WITH
    1.17.3
