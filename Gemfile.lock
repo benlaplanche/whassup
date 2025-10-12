@@ -1,25 +1,37 @@
 GEM
+  specs:
+
+GEM
   remote: https://rubygems.org/
   specs:
+    base64 (0.3.0)
     faraday (1.0.0)
       multipart-post (>= 1.2, < 3)
     jwt (2.2.1)
+    logger (1.7.0)
     mini_portile2 (2.4.0)
     multipart-post (2.1.1)
-    mustermann (1.1.1)
+    mustermann (3.0.4)
       ruby2_keywords (~> 0.0.1)
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
-    rack (2.2.3)
-    rack-protection (2.0.8.1)
-      rack
-    ruby2_keywords (0.0.2)
-    sinatra (2.0.8.1)
-      mustermann (~> 1.0)
-      rack (~> 2.0)
-      rack-protection (= 2.0.8.1)
+    rack (3.2.3)
+    rack-protection (4.2.1)
+      base64 (>= 0.1.0)
+      logger (>= 1.6.0)
+      rack (>= 3.0.0, < 4)
+    rack-session (2.1.1)
+      base64 (>= 0.1.0)
+      rack (>= 3.0.0)
+    ruby2_keywords (0.0.5)
+    sinatra (4.2.1)
+      logger (>= 1.6.0)
+      mustermann (~> 3.0)
+      rack (>= 3.0.0, < 4)
+      rack-protection (= 4.2.1)
+      rack-session (>= 2.0.0, < 3)
       tilt (~> 2.0)
-    tilt (2.0.10)
+    tilt (2.6.1)
     twilio-ruby (5.32.0)
       faraday (~> 1.0.0)
       jwt (>= 1.5, <= 2.5)
@@ -29,8 +41,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  sinatra!
+  sinatra (>= 2.1.0)!
   twilio-ruby!
 
 BUNDLED WITH
-   1.17.3
+   2.3.27
